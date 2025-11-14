@@ -29,7 +29,7 @@ public class Enrollments {
     private Courses Courses;
 
     @Column (nullable = false)
-    private EnrollmentsState state;
+    private EnrollmentsState enrollmentsState;
 
     @Column (nullable = false)
     private LocalDate enrollmentDate;

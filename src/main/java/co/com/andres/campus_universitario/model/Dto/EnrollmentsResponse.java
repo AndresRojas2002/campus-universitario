@@ -11,9 +11,9 @@ public record EnrollmentsResponse(
 
         Students students,
 
-        Courses Courses,
+        Courses courses,
 
-        EnrollmentsState state,
+        EnrollmentsState enrollmentsState,
 
         LocalDate enrollmentDate) {
 

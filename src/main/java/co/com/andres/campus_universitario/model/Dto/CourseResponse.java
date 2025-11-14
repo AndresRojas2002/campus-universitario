@@ -13,7 +13,7 @@ public record CourseResponse(
 
     Integer maxCapacity,
 
-    Professors professor
+    Professors professors
 
 ) {
 
