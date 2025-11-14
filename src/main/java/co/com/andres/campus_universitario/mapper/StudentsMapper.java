@@ -11,7 +11,7 @@ import co.com.andres.campus_universitario.model.entity.Students;
 public interface StudentsMapper {
 
     @Mapping (target = "id", ignore = true)
-    @Mapping (target = "role", expression = "java(set.of(\"ROLE_STUDENT\"))")
+    @Mapping (target = "role", expression = "java(Role.STUDENT)")
     Students toEntity(StudentsRequest studentsDto);
 
     StudentsResponse toResponse (Students studentsEntity);

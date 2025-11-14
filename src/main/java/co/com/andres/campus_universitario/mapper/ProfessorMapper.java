@@ -11,7 +11,7 @@ import co.com.andres.campus_universitario.model.entity.Professors;
 @Mapper(componentModel = "spring")
 public interface ProfessorMapper {
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "role", expression = "java(set.of(\"ROLE_PROFESSOR \"))")
+    @Mapping(target = "role", expression = "java(Role.PROFESSOR)")
     Professors toEntity(ProfessorRequest professorDto);
 
 

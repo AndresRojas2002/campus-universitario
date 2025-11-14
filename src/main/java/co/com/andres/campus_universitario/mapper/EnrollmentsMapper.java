@@ -12,7 +12,7 @@ import co.com.andres.campus_universitario.model.entity.Enrollments;
 @Mapper(componentModel = "spring")
 public interface EnrollmentsMapper {
      @Mapping(target = "id", ignore = true)
-      @Mapping(target = "enrollmentsState", expression = "java(set.of(\"ROLE_ACTIVE \"))")
+      @Mapping(target = "enrollmentsState", expression = "java(EnrollmentsState.ACTIVE)")
     
     Enrollments toEntity(EnrollmentsRequest studentsDto);
 
