@@ -14,7 +14,8 @@ public interface StudentsMapper {
     @Mapping (target = "role", expression = "java(Role.STUDENT)")
     Students toEntity(StudentsRequest studentsDto);
 
-    StudentsResponse toResponse (Students studentsEntity);
+
+    StudentsResponse toResponse (Students students);
 
 
 }

@@ -11,7 +11,7 @@ public record ProfessorResponse(
 
         String addres,
 
-        String gmail,
+        String email,
 
         Role role) {
 

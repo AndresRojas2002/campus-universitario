@@ -16,7 +16,7 @@ public record StudentsResponse(
      
         String addres,
 
-        String gmail,
+        String email,
 
         Role role
          ) {

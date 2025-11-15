@@ -2,6 +2,7 @@ package co.com.andres.campus_universitario.model.Dto;
 
 
 import com.fasterxml.jackson.annotation.JsonAlias;
+import co.com.andres.campus_universitario.model.entity.Professors;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -27,7 +28,7 @@ Integer maxCapacity,
 
 @JsonAlias({"profesor", "maestro"})
 @NotBlank(message = "el curso debe tener un profesor asignado")
-ProfessorRequest Professors
+Professors Professors
 
  ) {
 public CourseRequest{

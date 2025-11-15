@@ -31,7 +31,7 @@ public record ProfessorRequest (
         @NotBlank(message = "el usuario no puede ser nulo")
         @Email (message = "el formato del correo electronico no es valido ")
         @JsonAlias({"correo_electronico", "email"})
-        String gmail,
+        String email,
 
         @NotBlank(message = "la contraseña no puede ser nula")
         @Size(min = 8, max = 20, message = "la contraseña debe tener entre 8 y 20 caracteres")

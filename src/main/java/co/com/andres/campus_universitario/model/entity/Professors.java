@@ -37,7 +37,7 @@ public class Professors {
     private String addres;
 
     @Column (unique = true, nullable = false)
-    private String gmail;
+    private String email;
 
     @Column (unique = true, nullable = false)
     private String password;

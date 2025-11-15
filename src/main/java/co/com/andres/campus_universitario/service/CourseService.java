@@ -1,5 +1,7 @@
 package co.com.andres.campus_universitario.service;
 
-public interface CourseService {
+public interface CourseService  {
+
+    
 
 }
