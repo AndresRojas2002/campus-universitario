@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import co.com.andres.campus_universitario.config.ProfessorException.ProfessorByIdNotExistException;
+import co.com.andres.campus_universitario.config.exception.ProfessorException.ProfessorByIdNotExistException;
 import co.com.andres.campus_universitario.mapper.ProfessorMapper;
 import co.com.andres.campus_universitario.model.Dto.ProfessorRequest;
 import co.com.andres.campus_universitario.model.Dto.ProfessorResponse;
@@ -54,15 +54,16 @@ public class ProfessorServiceImp implements ProfessorService {
     }
 
     @Override
-    public ProfessorResponse updateStudents(Long id, ProfessorRequest professorRequest) {
+    public ProfessorResponse updateProfessor(Long id, ProfessorRequest professorRequest) {
         // TODO Auto-generated method stub
         var idProfessor = professorRepository.findById(id);
         if (!idProfessor.isPresent()) {
             throw new ProfessorByIdNotExistException("El profesor con id " + id + " no existe");
         }
         var professor = idProfessor.get();
-        var update = professorRepository.save(professor);
-        return professorMapper.toResponse(update);
+        professorMapper.updateEntityFromRequest(professorRequest, professor);
+        var updatedProfessor = professorRepository.save(professor);
+        return professorMapper.toResponse(updatedProfessor);
     }
 
     @Override

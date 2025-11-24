@@ -28,7 +28,7 @@ Integer maxCapacity,
 
 @JsonAlias({"profesor", "maestro"})
 @NotBlank(message = "el curso debe tener un profesor asignado")
-Professors Professors
+Professors professors
 
  ) {
 public CourseRequest{

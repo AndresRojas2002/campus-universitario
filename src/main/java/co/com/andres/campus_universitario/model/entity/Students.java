@@ -44,5 +44,12 @@ public class Students {
 
     @Column (nullable = false)
     private Role role;
+    
+
+     public Students(Long id) {
+        this.id = id;
+    }
+
+
 
 }

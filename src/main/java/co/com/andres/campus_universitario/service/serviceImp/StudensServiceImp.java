@@ -63,8 +63,9 @@ public class StudensServiceImp implements StudentsService {
         }
          // TODO falta 
         var update= idStudents.get();
-        studentsRepository.save(update);
-        return studentsMapper.toResponse(update);
+        studentsMapper.updateEntityFromRequest(studentsRequest, update);
+        var updatedStudents = studentsRepository.save(update);
+        return studentsMapper.toResponse(updatedStudents);
 
     }
 

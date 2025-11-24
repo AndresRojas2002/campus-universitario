@@ -16,7 +16,7 @@ public interface ProfessorService {
 
     void deleteById(Long id);
 
-    ProfessorResponse updateStudents(Long id, ProfessorRequest  professorRequest);
+    ProfessorResponse updateProfessor(Long id, ProfessorRequest  professorRequest);
 
     List<ProfessorResponse> getByNameOrLastName(String text);
 

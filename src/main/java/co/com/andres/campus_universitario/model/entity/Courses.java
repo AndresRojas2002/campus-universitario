@@ -34,4 +34,8 @@ public class Courses {
     @Column(nullable = false)
     private Professors professors;
 
+    public Courses(Long id) {
+        this.id = id;
+    }
+
 }

@@ -1,4 +1,4 @@
-package co.com.andres.campus_universitario.config.ProfessorException;
+package co.com.andres.campus_universitario.config.exception.ProfessorException;
 
 public class ProfessorByIdNotExistException extends RuntimeException{
 

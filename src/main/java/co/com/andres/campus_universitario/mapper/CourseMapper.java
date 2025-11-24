@@ -2,6 +2,7 @@ package co.com.andres.campus_universitario.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 
 import co.com.andres.campus_universitario.model.Dto.CourseRequest;
 import co.com.andres.campus_universitario.model.Dto.CourseResponse;
@@ -14,5 +15,10 @@ public interface CourseMapper {
     Courses toEntity(CourseRequest courseDto);
 
     CourseResponse toResponse(Courses coursesEntity);
+
+    @Mapping(target = "id", ignore = true)
+    void updateEntityFromRequest(CourseRequest request, @MappingTarget Courses course);
+
+
 
 }
